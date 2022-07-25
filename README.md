@@ -81,6 +81,10 @@ from efdet_tfl import demo #imports demo file from efdet_tfl package
 demo.show_demo() 
 ```
 
+## Other installations
+
+Since I use `Poetry`, I have created `.tar.gz` and `.whl` formats of the package too that can be also used for installation of this package
+
 # Troubleshooting
 
 You might have a problem with cv2 library in python, if you work with Ubuntu Linux Server, because it does not have `libsglu1` file. To solve this problem, you can use the following bash command:
