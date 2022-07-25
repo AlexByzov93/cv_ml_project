@@ -17,61 +17,69 @@ This task requires us to implement two functionalities:
 curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
 ```
 
-### Step 2. Pull repository
+### Step 2. Clone repository
 
 ```bash
+https://github.com/AlexByzov93/cv_ml_project.git
 
+cd cv_ml_project
 ```
 
-## Step 1. Install Poetry
-
-To install Poetry, you need to use the following code (Linux):
+### Step 3. Install package
 
 ```bash
-curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poetry.py | python -
+poetry install # Installs poetry and allows to use it the functionality of the demo.py
 ```
 
-
-## Step 2. Install package with `install`
-
-If you are going to build this project via `.toml` file, you need to 
-
-Disclaimer: This project was tested on a Linux Server (Ubuntu 20.04.), and I cannot guarantee for it to work on any platform. For example, if you use Windows machine, you need to use a slightly different syntax for activating a virtual environment. Also, if you use a Mac machine on M processes, you need to install Tensorflow for it.
-
-To create a virtual environment, use these two command in your bash:
+### Step 4. Start using Poetry shell (similar to activated virtualenv)
 
 ```bash
-#pip3 install virtualenv - use this line, if you have not installed virtualenv package
-#sudo apt install python3-pip - use this line, if you do not have a python3-pip  and repeat previous command
-python3 -m venv efficientdet_tflite
-#sudo apt install python3.8-venv - use this line, if you cannot create virtual environments on Linux
-source efficientdet_tflite/bin/activate
+cd efdet_tfl
+
+poetry shell # similar to source venv/bin/activate
 ```
 
-## Step 2. Install libraries
-
-To install necessary libraries, you can use prepared `requirements.txt` file
-
-```bash
-pip3 install -r requirements.txt
-```
-
-## Step 3. Use demo.py file
-
-To use demo, you can use the following bash line:
+### Step 5. Test the script
 
 ```bash
 python3 demo.py
 ```
 
-# Results
+## Installation from GitHub
 
-If everything works correct, you should see the following picture:
-![resul](results/dog_result_tflite.jpeg)
+Just for example, let me show how to combine virtual environments with installation from GitHub of `Poetry` package
 
-Original:
+### Step 1. Create and activatevirtual environment
 
-![puc](images/dog.jpeg)
+```bash
+python3 -m venv poetry_package
+
+source poetry_package/bin/activate
+```
+
+### Step 2. Install package from git
+
+```bash
+pip3 install --upgrade pip
+pip3 install https://github.com/AlexByzov93/cv_ml_project.git@task-1_2
+```
+
+### Step 3. Add image and weights into the folder
+
+```bash
+mkdir images weights # creates empty folders
+wget -O images/dogs.jpeg https://github.com/AlexByzov93/cv_ml_project/raw/task-1_1/images/dog.jpeg # downlods image of a dog
+wget -O weights/lite-model_efficientdet_lite0_detection_default_1.tflite
+https://github.com/AlexByzov93/cv_ml_project/raw/task-1_1/weights/lite-model_efficientdet_lite0_detection_default_1.tflite # downloads weights of the model
+```
+
+### Step 4. Test the package
+
+```bash
+python3 # starts python3 within virtual environment
+from efdet_tfl import demo #imports demo file from efdet_tfl package
+demo.show_demo() 
+```
 
 # Troubleshooting
 

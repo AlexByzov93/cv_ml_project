@@ -52,8 +52,11 @@ def show_demo():
     cv2.rectangle(img, (int(box[1] * h), int(box[0] * w)), (int(box[3] * h), int(box[2] * w)), (0,255,0), 2, 16)
 
     # if you want to see the results on linux server, you might use the following line:
-    cv2.imwrite('results/dog_result_tflite.jpeg', img) # saves demo result into results folder
+    #cv2.imwrite('results/dog_result_tflite.jpeg', img) # saves demo result into results folder
 
-    #cv2.imshow("demo", img)
-    #cv2.waitKey()
-    #cv2.destroyAllWindows()
+    cv2.imshow("demo", img)
+    cv2.waitKey()
+    cv2.destroyAllWindows()
+
+if __name__ == "__main__":
+    show_demo()
