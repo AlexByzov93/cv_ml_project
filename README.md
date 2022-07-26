@@ -10,10 +10,18 @@ This task was dedicated to adding CI/CD processes into a project. I added a new 
 4. Installs poetry
 5. Uses pytest with poetry
 6. Builds `.whl` and `.tar.gz` files with poetry
-7. Saves artifacts of the build
+7. Saves artifacts of the build (accessible on Actions Page for the last workflow runs)
 
+To use this workload, you just need to do the same steps as in task 2.1 (read below)
 
- adding style and code linting, and pre-commit hooks. I continued to use `Poetry` for solving this task. In this instruction I describe how to setup the project for local development
+## Pytest
+
+In this task we needed to create two tests:
+
+1. A regression test using a single image that checks results are always the same
+2. A “no error” test with big image, small image
+
+Since I am adding testing into the project, it will be more fruitful to refactor `demo.py` into different functions, which allows to test their work separately. Moreover, I also added a `main` function that does the same thing as previous poetry file.
 
 ## Step 1. Install Poetry
 
