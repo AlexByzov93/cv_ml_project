@@ -2,7 +2,13 @@ This project is dedicated to different forms of implementation of EfficientDet n
 
 # Task 2.1
 
-This task was dedicated to adding style and code linting, and pre-commit hooks. I continued to use `Poetry` for solving this task. In this instruction I describe how to setup the project for local development
+This task was dedicated to adding style and code linting, and pre-commit hooks. I continued to use `Poetry` for solving this task. In this project I use the following frameworks:
+
+- `flake8` for python style guide enforcement
+- `black` for code formatting
+- `reorder-python-imports` for re-ordering python imports by stdlib, third party, first party
+
+In this instruction I describe how to setup the project for local development.
 
 ## Step 1. Install Poetry
 
