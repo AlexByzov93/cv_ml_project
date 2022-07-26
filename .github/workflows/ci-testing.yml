@@ -25,3 +25,6 @@ jobs:
         pip3 install poetry
         poetry install
         poetry run pytest
+    - name: Building a project
+      run: |
+        poetry build
