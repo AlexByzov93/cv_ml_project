@@ -32,4 +32,4 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: wheel
-        path: edet_tflite-0.1.0-py3-none-any.whl
+        path: dist/edet_tflite-0.1.0-py3-none-any.whl

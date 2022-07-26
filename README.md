@@ -5,7 +5,14 @@ This project is dedicated to different forms of implementation of EfficientDet n
 This task was dedicated to adding CI/CD processes into a project. I added a new file `ci-testing.yml`, which does several things on each push or pull requests:
 
 1. Sets up a clean Python environment
-2. 
+2. Installs pre-commits
+3. Checks all files with pre-commits
+4. Installs poetry
+5. Uses pytest with poetry
+6. Builds `.whl` and `.tar.gz` files with poetry
+7. Saves artifacts of the build
+
+
  adding style and code linting, and pre-commit hooks. I continued to use `Poetry` for solving this task. In this instruction I describe how to setup the project for local development
 
 ## Step 1. Install Poetry
