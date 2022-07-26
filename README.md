@@ -13,7 +13,7 @@ curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/get-poet
 ## Step 2. Clone repository
 
 ```bash
-git clone https://github.com/AlexByzov93/cv_ml_project.git@task-2_1
+git clone -b task-2_1 https://github.com/AlexByzov93/cv_ml_project.git
 
 cd cv_ml_project
 ```
