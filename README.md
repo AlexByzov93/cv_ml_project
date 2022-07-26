@@ -1,8 +1,12 @@
 This project is dedicated to different forms of implementation of EfficientDet network for object detection via TensorFlow Lite [see paper here](https://arxiv.org/abs/1911.09070).
 
-# Task 2.1
+# Task 2.2
 
-This task was dedicated to adding style and code linting, and pre-commit hooks. I continued to use `Poetry` for solving this task. In this instruction I describe how to setup the project for local development
+This task was dedicated to adding CI/CD processes into a project. I added a new file `ci-testing.yml`, which does several things on each push or pull requests:
+
+1. Sets up a clean Python environment
+2. 
+ adding style and code linting, and pre-commit hooks. I continued to use `Poetry` for solving this task. In this instruction I describe how to setup the project for local development
 
 ## Step 1. Install Poetry
 

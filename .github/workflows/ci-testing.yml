@@ -28,3 +28,8 @@ jobs:
     - name: Building a project
       run: |
         poetry build
+    - name: Upload Artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: wheel
+        path: edet_tflite-0.1.0-py3-none-any.whl
