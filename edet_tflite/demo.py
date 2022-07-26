@@ -95,6 +95,7 @@ def draw_boxes(img, w, h, bboxes, n_boxes=3):
             2,
             16,
         )
+    return img
 
 
 def show_image(img):
