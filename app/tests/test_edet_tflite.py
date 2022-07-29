@@ -1,5 +1,5 @@
 import numpy as np
-from edet_tflite import img_preprocess
+from edet_tflite.edet_tflite import img_preprocess
 
 
 def test_regr_img_preprocess():
