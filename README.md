@@ -7,7 +7,7 @@ This task is dedicated to creating a demonstational application for object detec
 ## Step 1. Cloning git
 
 ```bash
-git clone -b task-3 https://github.com/AlexByzov93/cv_ml_project.git
+git clone -b task_3 https://github.com/AlexByzov93/cv_ml_project.git
 
 cd cv_ml_project
 ```
