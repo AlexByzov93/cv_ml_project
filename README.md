@@ -88,3 +88,8 @@ sudo docker build -t cv_ml_project_final .
 ```
 sudo docker run -p 8501:8501 cv_ml_project_final
 ```
+
+Image from the app 1:
+![](screenshots/init_screen.png)
+Image from the app 2:
+![](screenshots/obj_detect.png)
