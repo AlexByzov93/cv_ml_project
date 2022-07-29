@@ -64,6 +64,7 @@ python3 demo.py --img_path images/dog.jpeg --n_boxes 1 # will detect one object 
 
 Default input:
 ![](screenshots/people.jpeg)
+
 Default output:
 ![](screenshots/people_res.jpeg)
 
@@ -91,5 +92,6 @@ sudo docker run -p 8501:8501 cv_ml_project_final
 
 Image from the app 1:
 ![](screenshots/init_screen.png)
+
 Image from the app 2:
 ![](screenshots/obj_detect.png)
