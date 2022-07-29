@@ -21,12 +21,14 @@ jobs:
         pip3 install pre-commit
         pre-commit install
         pre-commit run --all-files
-    - name: Test with pytest
+    - name: Install package
       run: |
         pip3 install poetry
         cd app
         poetry install
-        poetry shell
+        poetry run pytest
+    - name: Test with pytest
+      run: |
         poetry run pytest
     - name: Building a project
       run: |
