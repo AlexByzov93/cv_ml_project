@@ -1,0 +1,41 @@
+
+name: CI Testing
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Run pre-commit hooks
+      run: |
+        cd app
+        python3 -m pip install --upgrade pip
+        pip3 install pre-commit
+        pre-commit install
+        pre-commit run --all-files
+    - name: Test with pytest
+      run: |
+        pip3 install poetry
+        poetry install
+        poetry run pytest
+    - name: Building a project
+      run: |
+        poetry build
+    - name: Upload wheel
+      uses: actions/upload-artifact@v3
+      with:
+        name: wheel
+        path: dist/edet_tflite-0.1.0-py3-none-any.whl
+    - name: Upload sdist_tar.gz
+      uses: actions/upload-artifact@v3
+      with:
+        name: sdist_tar.gz
+        path: dist/edet_tflite-0.1.0.tar.gz
