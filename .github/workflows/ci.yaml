@@ -26,9 +26,9 @@ jobs:
         pip3 install poetry
         cd app
         poetry install
-        poetry run pytest
     - name: Test with pytest
       run: |
+        cd app
         poetry run pytest
     - name: Building a project
       run: |
