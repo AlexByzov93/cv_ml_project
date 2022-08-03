@@ -47,6 +47,8 @@ poetry install
 poetry shell
 ```
 
+You can also install this package from wheel and binaries. To access them, you can go to GitHub Actions of this page and download package files.
+
 ### Step 5. Check demo.py
 
 `demo.py` allows you to use EffecientDet for any image in the `images` folder. If you want to add your own images, just copy them there. `demo.py` allows you to specify two additional arguments:
